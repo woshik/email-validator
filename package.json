@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/woshik/email-validator/issues"
   },
-  "homepage": "https://github.com/woshik/email-validator#readme"
+  "homepage": "https://github.com/woshik/email-validator#readme",
+  "dependencies": {
+    "@hapi/joi": "^16.1.7"
+  }
 }
