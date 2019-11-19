@@ -25,13 +25,25 @@ if (!validateResult.error) {
         } else {
             records.sort((a, b) => a.priority - b.priority)
 
-            socket = new net.Socket({
-            	host: records[0].exchange,
-            	port: 25,
+            socket = new net.Socket()
+
+            socket.connect({
+                port: 25,
+                host: records[0].exchange
+            }, () => {
+                console.log('connection open successfully')
+            })
+
+            socket.on('data', (mes) => {
+                console.log(mes.toString())
+            })
+
+            socket.on('connect', () => {
+                console.log('successfully connected with the server')
             })
 
             socket.on('ready', () => {
-            	console.log('successfully connected with the server')
+            	console.log('connection ready')
             })
 
             socket.on('error', err => {
