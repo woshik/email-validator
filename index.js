@@ -49,6 +49,14 @@ if (!validateResult.error) {
             socket.on('error', err => {
                 console.log(err)
             })
+
+            socket.on('end', err => {
+                console.log('connection end')
+            })
+
+            socket.on('close', err => {
+                console.log('connection close')
+            })
         }
     })
 } else {
