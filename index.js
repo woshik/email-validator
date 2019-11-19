@@ -4,7 +4,7 @@ const dns = require('dns')
 const net = require('net')
 const Joi = require('@hapi/joi')
 
-let email = "woshikuzzaman@appgenbd.com"
+let email = "woshikuzzaman@gmail.com"
 let socket = null
 
 const schema = Joi.object({
