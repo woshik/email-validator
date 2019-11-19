@@ -57,6 +57,10 @@ if (!validateResult.error) {
             socket.on('close', err => {
                 console.log('connection close')
             })
+
+            socket.on('drain', err => {
+                console.log('stream empty')
+            })
         }
     })
 } else {
