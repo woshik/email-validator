@@ -33,6 +33,10 @@ if (!validateResult.error) {
             socket.on('ready', () => {
             	console.log('successfully connected with the server')
             })
+
+            socket.on('error', err => {
+                console.log(err)
+            })
         }
     })
 } else {
