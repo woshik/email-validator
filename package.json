@@ -1,0 +1,27 @@
+{
+  "name": "email-validator",
+  "version": "1.0.0",
+  "description": "Cleanup and validate email address for mail marketing",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woshik/email-validator.git"
+  },
+  "keywords": [
+    "email-validator",
+    "email",
+    "validate",
+    "email",
+    "email",
+    "cleanup"
+  ],
+  "author": "Hyper Queue",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/woshik/email-validator/issues"
+  },
+  "homepage": "https://github.com/woshik/email-validator#readme"
+}
