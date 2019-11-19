@@ -5,7 +5,7 @@ const net = require('net')
 const Joi = require('@hapi/joi')
 
 let email = "woshikuzzaman@appgenbd.com"
-
+let socket = null
 
 const schema = Joi.object({
     email: Joi.string().trim().email()
@@ -24,21 +24,14 @@ if (!validateResult.error) {
             console.log('invalid email')
         } else {
             records.sort((a, b) => a.priority - b.priority)
-            // records.forEach(mx => {
-            // 	net.createConnection({
-            // 		pot
-            // 	}, )
-            // })
 
-            let socket = net.createConnection({
+            socket = new net.Socket({
             	host: records[0].exchange,
             	port: 25,
-            }, () => {
-
             })
 
-            socket.on('data', msg => {
-            	console.log(msg)
+            socket.on('ready', () => {
+            	console.log('successfully connected with the server')
             })
         }
     })
