@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/woshik/email-validator#readme",
   "dependencies": {
-    "@hapi/joi": "^16.1.7"
+    "@hapi/joi": "^16.1.7",
+    "email-verify": "^0.2.1"
   }
 }
